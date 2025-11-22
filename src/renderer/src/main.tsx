@@ -1,4 +1,4 @@
-import './assets/main.css'
+
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -11,12 +11,14 @@ import App from './App'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import { CssBaseline } from '@mui/material';
+import { RouterProvider } from 'react-router';
+import { router } from './routes';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <App />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>
 )
