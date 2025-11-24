@@ -1,7 +1,8 @@
 import { Box } from '@mui/material'
-import { CardRegistro, Header } from './components'
-import { registrosEjemplo } from './components/cardDoument'
+import {  Header } from './components'
+
 import { CardList } from './components/cardDoument/CardList'
+import * as yup from "yup"
 
 export const RegistroCofepris = () => {
   const handleVer = (id: number) => {
