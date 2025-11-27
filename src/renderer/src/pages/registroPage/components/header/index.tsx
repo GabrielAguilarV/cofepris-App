@@ -1,11 +1,13 @@
 
 import { Box, Button } from '@mui/material'
 import { Add as AddIcon } from '@mui/icons-material'
+import { useNavigate } from 'react-router'
 
 export const Header = () => {
+  const navigate = useNavigate()
+
   const handleNuevoRegistro = () => {
-    // Lógica para crear nuevo registro
-    console.log('Nuevo registro')
+    navigate('/formulario')
   }
 
   return (
