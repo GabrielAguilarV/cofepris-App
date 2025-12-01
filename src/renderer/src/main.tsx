@@ -7,12 +7,12 @@ import '@fontsource/roboto/700.css';
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import { CssBaseline } from '@mui/material';
 import { RouterProvider } from 'react-router';
 import { router } from './routes';
+import './assets/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

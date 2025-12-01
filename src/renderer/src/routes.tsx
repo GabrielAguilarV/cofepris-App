@@ -5,6 +5,7 @@ import { RootLayout } from './layouts/RootLayout'
 import { AboutPage } from './pages/AboutPage/AboutPage'
 import { RegistroCofepris } from './pages/registroPage/RegistroCofepris'
 import { FormularioPage } from './pages/FormularioPage'
+import App from './pages/registro'
 // import RootLayout from './layouts/RootLayout'
 // import HomePage from './pages/HomePage'
 // import TasksPage from './pages/TasksPage'
@@ -16,12 +17,10 @@ export const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
+
       {
         index: true,
-        element: <HomePage />
-      },
-      {
-        path: 'tasks',
+     
         element: <RegistroCofepris />
       },
       {
@@ -32,6 +31,10 @@ export const router = createBrowserRouter([
         path: 'about',
         element: <AboutPage />
       },
+      {
+        path: 'registo',
+        element: <App />
+      }
     
     ]
   }

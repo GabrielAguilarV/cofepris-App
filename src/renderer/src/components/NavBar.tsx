@@ -32,9 +32,9 @@ export const NavBar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
   const menuItems = [
-    { text: 'Inicio', path: '/', icon: <HomeIcon /> },
-    { text: 'Registro COFEPRIS', path: '/tasks', icon: <AssignmentIcon /> },
-    { text: 'Acerca de', path: '/about', icon: <InfoIcon /> }
+    { text: 'Registro COFEPRIS', path: '/', icon: <AssignmentIcon /> },
+    { text: 'Acerca de', path: '/about', icon: <InfoIcon /> },
+    { text: 'Formulario', path: '/registo', icon: <InfoIcon /> }
   ]
 
   const handleNavigation = (path: string) => {
