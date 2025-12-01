@@ -1,6 +1,6 @@
 
 import { Outlet } from 'react-router'
-import { Box, Container, Paper } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import { NavBar } from '../components/NavBar'
 
 export const RootLayout = () => {
@@ -20,22 +20,11 @@ export const RootLayout = () => {
         sx={{
           flexGrow: 1,
           py: 3,
-          mt: 8,
-          bgcolor: 'grey.50'
+          mt: 8
         }}
       >
-        <Container maxWidth="lg">
-          <Paper
-            elevation={5}
-            sx={{
-              p: 3,
-              minHeight: 'calc(100vh - 130px)',
-              borderRadius: 2,
-              bgcolor: 'white'
-            }}
-          >
-            <Outlet />
-          </Paper>
+        <Container maxWidth="xl">
+          <Outlet />
         </Container>
       </Box>
     </Box>

@@ -1,8 +1,15 @@
-import { contextBridge } from 'electron'
+import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
-const api = {}
+const api = {
+  // Database operations
+  getAllActas: () => ipcRenderer.invoke('db:getAllActas'),
+  getActaById: (id: number) => ipcRenderer.invoke('db:getActaById', id),
+  createActa: (data: any) => ipcRenderer.invoke('db:createActa', data),
+  updateActa: (id: number, data: any) => ipcRenderer.invoke('db:updateActa', id, data),
+  deleteActa: (id: number) => ipcRenderer.invoke('db:deleteActa', id)
+}
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise

@@ -17,9 +17,7 @@ import {
 } from '@mui/material'
 import {
   Menu as MenuIcon,
-  Home as HomeIcon,
   Assignment as AssignmentIcon,
-  Info as InfoIcon,
   MedicalServices as MedicalServicesIcon
 } from '@mui/icons-material'
 import { useNavigate, useLocation } from 'react-router'
@@ -33,8 +31,7 @@ export const NavBar = () => {
 
   const menuItems = [
     { text: 'Registro COFEPRIS', path: '/', icon: <AssignmentIcon /> },
-    { text: 'Acerca de', path: '/about', icon: <InfoIcon /> },
-    { text: 'Formulario', path: '/registo', icon: <InfoIcon /> }
+    { text: 'Formulario', path: '/formulario', icon: <MedicalServicesIcon /> }
   ]
 
   const handleNavigation = (path: string) => {

@@ -1,41 +1,22 @@
 
-import { createBrowserRouter } from 'react-router'
-import { HomePage } from './pages/HomePage/HomePage'
+import { createHashRouter } from 'react-router'
 import { RootLayout } from './layouts/RootLayout'
-import { AboutPage } from './pages/AboutPage/AboutPage'
 import { RegistroCofepris } from './pages/registroPage/RegistroCofepris'
-import { FormularioPage } from './pages/FormularioPage'
-import App from './pages/registro'
-// import RootLayout from './layouts/RootLayout'
-// import HomePage from './pages/HomePage'
-// import TasksPage from './pages/TasksPage'
-// import AboutPage from './pages/AboutPage'
-// import NotFoundPage from './pages/NotFoundPage'
+import { FormularioPage } from './pages/FormularioPage/FormularioPage'
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <RootLayout />,
     children: [
-
       {
         index: true,
-     
         element: <RegistroCofepris />
       },
       {
         path: 'formulario',
         element: <FormularioPage />
-      },
-      {
-        path: 'about',
-        element: <AboutPage />
-      },
-      {
-        path: 'registo',
-        element: <App />
       }
-    
     ]
   }
 ])
